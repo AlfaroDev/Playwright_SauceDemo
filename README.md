@@ -22,6 +22,23 @@ npx playwright install --with-deps
 
 ---
 
+## Environment Variables
+
+| Variable | Value |
+|---|---|
+| `BASE_URL` | `https://www.saucedemo.com` |
+| `USER` | See [saucedemo.com](https://www.saucedemo.com) |
+| `PASSWORD` | See [saucedemo.com](https://www.saucedemo.com) |
+| `FAILED_USER` | See [saucedemo.com](https://www.saucedemo.com) |
+| `FAILED_PASSWORD` | See [saucedemo.com](https://www.saucedemo.com) |
+| `FIRST_NAME` | Any string |
+| `LAST_NAME` | Any string |
+| `POSTAL_CODE` | Any string |
+
+> For CI, set these as GitHub Secrets. For local runs, add them to `.env.qa`.
+
+---
+
 ## Run Tests
 
 ```bash
