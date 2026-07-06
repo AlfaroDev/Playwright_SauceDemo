@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Playwright
+playwright-report/
+test-results/
+.playwright-bdd/
+blob-report/
+playwright/.cache/
+playwright/.auth/
+.features-gen/
+
+# Monocart - keep trend history but ignore reports
+monocart-report/*
+!monocart-report/trend.json
+
+# TypeScript
+dist/
+*.tsbuildinfo
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# env
+.env
+.env.*
+!.env.example
