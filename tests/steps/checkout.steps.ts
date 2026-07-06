@@ -14,9 +14,9 @@ When('I proceed to checkout', async ({ page }) => {
 When('I fill the checkout form with my personal info', async ({ page }) => {
   const checkoutInfoPage = new CheckoutInfoPage(page);
   await checkoutInfoPage.fillInfoForm(
-    process.env.firstName,
-    process.env.lastName,
-    process.env.postalCode
+    process.env.FIRST_NAME,
+    process.env.LAST_NAME,
+    process.env.POSTAL_CODE
   );
 });
 

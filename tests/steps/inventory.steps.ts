@@ -9,9 +9,9 @@ let randomItem: any;
 let randomItemInfo: any[];
 
 Given('I am logged in with valid credentials', async ({ page }) => {
-  await page.goto(process.env.baseURL);
+  await page.goto(process.env.BASE_URL);
   const loginPage = new (await import('../../pages/LoginPage')).LoginPage(page);
-  await loginPage.login(process.env.user, process.env.password);
+  await loginPage.login(process.env.USER, process.env.PASSWORD);
 });
 
 When('I select a random item from the inventory', async ({ page }) => {
