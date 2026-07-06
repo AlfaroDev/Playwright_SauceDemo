@@ -7,7 +7,9 @@ import { defineBddConfig } from 'playwright-bdd';
  */
 import dotenv from 'dotenv';
 import path from 'path';
-dotenv.config({ path: path.resolve(__dirname, `.env.${process.env.NODE_ENV ? process.env.NODE_ENV : 'qa'}`) });
+if (!process.env.CI) {
+  dotenv.config({ path: path.resolve(__dirname, `.env.${process.env.NODE_ENV ? process.env.NODE_ENV : 'qa'}`) })
+};
 
 const testDir = defineBddConfig({
   features: 'tests/features/**/*.feature',
